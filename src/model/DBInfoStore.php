@@ -94,25 +94,16 @@ class DBInfoStore
     }
 
     //更新用户个人信息
-    public function editCustomerInfo($store_id,$password,$username,$phone,$email)
+    public function editStoreInfo($store_id,$username,$phone,$email)
     {
-        $result = $this->checkByTid($store_id,$password);
-        if($result)
-        {
-            $data = $this->database->update('StoreInfoTable',['username'=>$username,'phone'=>$phone,'email'=>$email],['store_id' => $store_id]);
-            $num = $data->rowCount();
-            if ($num == 1)
-                return "ok";
-            else if($num == 0)
-                return "no effect";
-            else
-                return "update failed";
-
-        }
+        $data = $this->database->update('StoreInfoTable',['username'=>$username,'phone'=>$phone,'email'=>$email],['store_id' => $store_id]);
+        $num = $data->rowCount();
+        if ($num == 1)
+            return "ok";
+        else if($num == 0)
+            return "no effect";
         else
-        {
-            return "auth failed";
-        }
+            return "update failed";
 
     }
 

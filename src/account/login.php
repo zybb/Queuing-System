@@ -12,7 +12,7 @@ require_once MODEL_PATH."DBInfoStore.php";
 header("Content-Type: text/html; charset=utf-8");
 //    header("Access-Control-Allow-Origin:*");
 
-$teamName = $_POST['username'];
+$username = $_POST['username'];
 $password = $_POST['password'];
 $flag = $_POST['flag'];
 $json = '';

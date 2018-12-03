@@ -22,7 +22,6 @@
 
 
     }elseif($_POST['info'] == 'info'){
-        $password = $_POST['password'];
         $username = $_POST['username'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
@@ -84,7 +83,7 @@
 
         //edit store infomation
         $userchk = new DBInfoCustomer();
-        $result = $userchk->edit_store_infomation($store_id,$password,$username,$phone,$email,$describe);
+        $result = $userchk->editStoreInfo($store_id,$username,$phone,$email,$describe);
         if($result=="failed"){
             $json = '{"state":"failed"}';
             echo $json;
@@ -136,7 +135,7 @@
 
         //edit user infomation
         $userchk = new DBInfoStore();
-        $result = $userchk->update_passwd($store_id,$password,$newpassword);
+        $result = $userchk->updatePassword($store_id,$password,$newpassword);
         if($result=="failed"){
             $json = '{"state":"failed"}';
             echo $json;

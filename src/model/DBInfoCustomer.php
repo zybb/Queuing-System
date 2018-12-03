@@ -92,25 +92,17 @@ class DBInfoCustomer
     }
 
     //更新用户个人信息
-    public function editCustomerInfo($customer_id,$password,$username,$phone,$email)
+    public function editCustomerInfo($customer_id,$username,$phone,$email)
     {
-        $result = $this->checkByTid($customer_id,$password);
-        if($result)
-        {
-            $data = $this->database->update('CustomerInfoTable',['username'=>$username,'phone'=>$phone,'email'=>$email],['customer_id' => $customer_id]);
-            $num = $data->rowCount();
-            if ($num == 1)
-                return "ok";
-            else if($num == 0)
-                return "no effect";
-            else
-                return "update failed";
 
-        }
+        $data = $this->database->update('CustomerInfoTable',['username'=>$username,'phone'=>$phone,'email'=>$email],['customer_id' => $customer_id]);
+        $num = $data->rowCount();
+        if ($num == 1)
+            return "ok";
+        else if($num == 0)
+            return "no effect";
         else
-        {
-            return "auth failed";
-        }
+            return "update failed";
 
     }
 
