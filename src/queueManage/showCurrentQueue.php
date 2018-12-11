@@ -10,14 +10,10 @@
 session_start();
 require_once MODEL_PATH."DBQueue.php";
 require_once MODEL_PATH."DBStoreState.php";
+$store = $_POST['store'];
 
-if(!isset($_SESSION['store_id']))
-{
-    $msg = array('state' => 'nologin');
-    die(json_encode(($msg)));
-}
-
-$store_id = $_SESSION['store_id'];
+$check = new DBInfoStore();
+$store_id = $check->getIdByName($store);
 $check = new DBStoreState();
 $result = $check->checkOpen($store_id);
 if($result){
