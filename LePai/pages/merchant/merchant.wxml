@@ -1,0 +1,20 @@
+ <view>
+ 
+ <view class='row'>
+        <view class='info'>
+               <input  class= 'info-input' bindinput="getname" placeholder="输入商家（队列）名称" />
+         </view>
+ 
+ </view>
+
+ <text class='wenzi'>选择类别：</text>
+
+ <radio-group class='leibie' bindtap="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+  </label>
+</radio-group>
+
+ <button class='submit' bindtap='submit'>提交</button>
+ <button class='submit' bindtap='submit0'>管理</button>
+ </view>

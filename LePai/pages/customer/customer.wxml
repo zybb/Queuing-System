@@ -1,0 +1,26 @@
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" vertical="{{isVertical}}" duration="{{duration}}" circular='false'>
+  <swiper-item wx:for="{{imgUrls}}">
+    <image src="{{item}}" />
+  </swiper-item>
+</swiper>
+<view class='listview'>
+  <image class='zheyangpeng' src="{{imageSrc}}"></image>
+
+  <swiper class="tab-right" vertical="false" interval="1000" display-multiple-items='3'>
+      <view class="right-item">
+        <block wx:for-index="idx" wx:for='{{aa}}'>
+          <swiper-item>
+            <view class='content-item' bindtap='call'>
+              <image src='{{avatarUrl}}' class='avater'></image>
+              <image src='{{imageSrc1}}' class='avater1' ></image>
+              <text class='name'>{{item.nickName}}</text>
+            </view>
+          </swiper-item>
+        </block> 
+      </view>
+  </swiper>
+
+</view>
+
+

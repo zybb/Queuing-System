@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/start/start",
+    "pages/customer/customer",
+    "pages/getnumber/getnumber",
+    "pages/manage/manage",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/merchant/merchant",
+    "pages/register/register"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "✩ HAPPY QUEUE ✩",
+    "navigationBarTextStyle":"black"
+  }
+}

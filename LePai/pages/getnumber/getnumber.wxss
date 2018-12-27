@@ -1,0 +1,34 @@
+.viewclass{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  background-color: #99dfff;
+}
+
+.dqrs{
+  margin-top: 35%;
+  margin: 20px
+}
+
+.callnumber{
+  height: 40px;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.viewclass1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  justify-content: flex-end;
+}
+
+.viewclass2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+  justify-content: flex-start;
+}

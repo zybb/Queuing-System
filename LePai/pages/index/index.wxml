@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="container_up" style="position:fixed; top:0;">
+      <image class = "image0" src= "{{imageSrc0}}"></image>
+      <image class = "image" src= "{{imageSrc}}"></image>
+    </view>
+    <view class="container_down" style="position:fixed; bottom:0;">
+      <text class="text">Please choose your role：</text>
+      <button class="button" bindtap='merchantbtn'>Merchant</button>
+      <button class="button0" bindtap='customerbtn'>Customer</button>
+      <image class = "image1" src= "{{imageSrc1}}"></image> 
+    </view>
+</view>
