@@ -1,0 +1,9 @@
+<!--logs.wxml-->
+<view class="viewclass" style="position:fixed; bottom:0; top:0; right:0; left:0">
+  <view class="viewclass1">
+    <text class='dqrs'>您排在第{{current}}位</text>
+  </view>
+  <view class="viewclass2">
+    <button class='callnumber' bindtap='click'>取号</button>
+  </view>
+</view>

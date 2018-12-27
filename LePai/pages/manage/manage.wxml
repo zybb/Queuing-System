@@ -1,0 +1,9 @@
+<!--logs.wxml-->
+<view class="viewclass" style="position:fixed; bottom:0; top:0; right:0; left:0">
+  <view class="viewclass1">
+    <text class='dqrs'>当前队列人数：{{current}}</text>
+  </view>
+  <view class="viewclass2">
+    <button class='callnumber' bindtap='click'>叫号</button>
+  </view>
+</view>
